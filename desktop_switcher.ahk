@@ -149,14 +149,22 @@ OutputDebug, [loading] desktops: %DesktopCount% current: %CurrentDesktop%
 ; CapsLock & a::switchDesktopByNumber(CurrentDesktop - 1)
 ; CapsLock & c::createVirtualDesktop()
 ; CapsLock & d::deleteVirtualDesktop()
-#1::switchDesktopByNumber(1) ; Win+1 => Desktop 1
-#2::switchDesktopByNumber(2) ; Win+2 => Desktop 2
-#3::switchDesktopByNumber(3) ; Win+3 => Desktop 3
-#4::switchDesktopByNumber(4) ; Win+4 => Desktop 4
-#5::switchDesktopByNumber(5) ; Win+5 => Desktop 5
-#6::switchDesktopByNumber(6) ; Win+6 => Desktop 6
-#7::switchDesktopByNumber(7) ; Win+7 => Desktop 7
-#8::switchDesktopByNumber(8) ; Win+8 => Desktop 8
+; #1::switchDesktopByNumber(1) ; Win+1 => Desktop 1
+; #2::switchDesktopByNumber(2) ; Win+2 => Desktop 2
+; #3::switchDesktopByNumber(3) ; Win+3 => Desktop 3
+; #4::switchDesktopByNumber(4) ; Win+4 => Desktop 4
+; #5::switchDesktopByNumber(5) ; Win+5 => Desktop 5
+; #6::switchDesktopByNumber(6) ; Win+6 => Desktop 6
+; #7::switchDesktopByNumber(7) ; Win+7 => Desktop 7
+; #8::switchDesktopByNumber(8) ; Win+8 => Desktop 8
+!1::switchDesktopByNumber(1) ; Alt+1 => Desktop 1
+!2::switchDesktopByNumber(2) ; Alt+2 => Desktop 2
+!3::switchDesktopByNumber(3) ; Alt+3 => Desktop 3
+!4::switchDesktopByNumber(4) ; Alt+4 => Desktop 4
+!5::switchDesktopByNumber(5) ; Alt+5 => Desktop 5
+!6::switchDesktopByNumber(6) ; Alt+6 => Desktop 6
+!7::switchDesktopByNumber(7) ; Alt+7 => Desktop 7
+!8::switchDesktopByNumber(8) ; Alt+8 => Desktop 8
 
 ; ; Alternate keys for this config. Adding these because DragonFly (python) doesn't send CapsLock correctly.
 ; ^!1::switchDesktopByNumber(1)
