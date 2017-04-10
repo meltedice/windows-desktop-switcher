@@ -1,5 +1,6 @@
 ; Globals
-DesktopCount = 2        ; Windows starts with 2 desktops at boot
+; DesktopCount = 2        ; Windows starts with 2 desktops at boot
+DesktopCount = 8        ; Windows starts with 8 desktops at boot
 CurrentDesktop = 1      ; Desktop count is 1-indexed (Microsoft numbers them this way)
 
 ;
@@ -131,37 +132,45 @@ SetKeyDelay, 75
 mapDesktopsFromRegistry()
 OutputDebug, [loading] desktops: %DesktopCount% current: %CurrentDesktop%
 
-; User config!
-; This section binds the key combo to the switch/create/delete actions
-CapsLock & 1::switchDesktopByNumber(1)
-CapsLock & 2::switchDesktopByNumber(2)
-CapsLock & 3::switchDesktopByNumber(3)
-CapsLock & 4::switchDesktopByNumber(4)
-CapsLock & 5::switchDesktopByNumber(5)
-CapsLock & 6::switchDesktopByNumber(6)
-CapsLock & 7::switchDesktopByNumber(7)
-CapsLock & 8::switchDesktopByNumber(8)
-CapsLock & 9::switchDesktopByNumber(9)
-CapsLock & n::switchDesktopByNumber(CurrentDesktop + 1)
-CapsLock & p::switchDesktopByNumber(CurrentDesktop - 1)
-CapsLock & s::switchDesktopByNumber(CurrentDesktop + 1)
-CapsLock & a::switchDesktopByNumber(CurrentDesktop - 1)
-CapsLock & c::createVirtualDesktop()
-CapsLock & d::deleteVirtualDesktop()
+; ; User config!
+; ; This section binds the key combo to the switch/create/delete actions
+; CapsLock & 1::switchDesktopByNumber(1)
+; CapsLock & 2::switchDesktopByNumber(2)
+; CapsLock & 3::switchDesktopByNumber(3)
+; CapsLock & 4::switchDesktopByNumber(4)
+; CapsLock & 5::switchDesktopByNumber(5)
+; CapsLock & 6::switchDesktopByNumber(6)
+; CapsLock & 7::switchDesktopByNumber(7)
+; CapsLock & 8::switchDesktopByNumber(8)
+; CapsLock & 9::switchDesktopByNumber(9)
+; CapsLock & n::switchDesktopByNumber(CurrentDesktop + 1)
+; CapsLock & p::switchDesktopByNumber(CurrentDesktop - 1)
+; CapsLock & s::switchDesktopByNumber(CurrentDesktop + 1)
+; CapsLock & a::switchDesktopByNumber(CurrentDesktop - 1)
+; CapsLock & c::createVirtualDesktop()
+; CapsLock & d::deleteVirtualDesktop()
+#1::switchDesktopByNumber(1) ; Win+1 => Desktop 1
+#2::switchDesktopByNumber(2) ; Win+2 => Desktop 2
+#3::switchDesktopByNumber(3) ; Win+3 => Desktop 3
+#4::switchDesktopByNumber(4) ; Win+4 => Desktop 4
+#5::switchDesktopByNumber(5) ; Win+5 => Desktop 5
+#6::switchDesktopByNumber(6) ; Win+6 => Desktop 6
+#7::switchDesktopByNumber(7) ; Win+7 => Desktop 7
+#8::switchDesktopByNumber(8) ; Win+8 => Desktop 8
 
-; Alternate keys for this config. Adding these because DragonFly (python) doesn't send CapsLock correctly.
-^!1::switchDesktopByNumber(1)
-^!2::switchDesktopByNumber(2)
-^!3::switchDesktopByNumber(3)
-^!4::switchDesktopByNumber(4)
-^!5::switchDesktopByNumber(5)
-^!6::switchDesktopByNumber(6)
-^!7::switchDesktopByNumber(7)
-^!8::switchDesktopByNumber(8)
-^!9::switchDesktopByNumber(9)
-^!n::switchDesktopByNumber(CurrentDesktop + 1)
-^!p::switchDesktopByNumber(CurrentDesktop - 1)
-^!s::switchDesktopByNumber(CurrentDesktop + 1)
-^!a::switchDesktopByNumber(CurrentDesktop - 1)
-^!c::createVirtualDesktop()
-^!d::deleteVirtualDesktop()
+; ; Alternate keys for this config. Adding these because DragonFly (python) doesn't send CapsLock correctly.
+; ^!1::switchDesktopByNumber(1)
+; ^!2::switchDesktopByNumber(2)
+; ^!3::switchDesktopByNumber(3)
+; ^!4::switchDesktopByNumber(4)
+; ^!5::switchDesktopByNumber(5)
+; ^!6::switchDesktopByNumber(6)
+; ^!7::switchDesktopByNumber(7)
+; ^!8::switchDesktopByNumber(8)
+; ^!9::switchDesktopByNumber(9)
+; ^!n::switchDesktopByNumber(CurrentDesktop + 1)
+; ^!p::switchDesktopByNumber(CurrentDesktop - 1)
+; ^!s::switchDesktopByNumber(CurrentDesktop + 1)
+; ^!a::switchDesktopByNumber(CurrentDesktop - 1)
+; ^!c::createVirtualDesktop()
+; ^!d::deleteVirtualDesktop()
